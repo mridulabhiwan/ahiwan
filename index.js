@@ -3,14 +3,9 @@ const app = express();
 var bodyParser = require('body-parser');
 require("./db")
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 9000;
 
 app.use(express.json());
-// var bodyParser = require('body-parser');
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded());
-// in latest body-parser use like below.
-// app.use(bodyParser.urlencoded({ extended: true }));
 const userroutes = require("./routes/userroutes");
 app.use(userroutes);
 
